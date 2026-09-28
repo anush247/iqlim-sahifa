@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Yer va Iqlim</title>
 
 <style>
@@ -18,122 +19,86 @@ body{
 }
 
 header{
-  padding:55px 20px;
   text-align:center;
-  background:linear-gradient(135deg,#092e26,#123f35);
+  padding:55px 20px;
+  background:linear-gradient(135deg,#073b32,#0b6654);
 }
 
-header .earth{
-  font-size:90px;
-  animation:spin 12s linear infinite;
-}
-
-@keyframes spin{
-  from{transform:rotate(0)}
-  to{transform:rotate(360deg)}
-}
-
-h1{
-  font-size:48px;
-  margin:15px 0;
-  color:#9de0d1;
+header h1{
+  font-size:45px;
+  margin:0 0 15px;
 }
 
 header p{
-  font-size:20px;
-  color:#b8d8d1;
+  font-size:19px;
+  color:#c9eee4;
 }
 
 .container{
-  max-width:1000px;
+  max-width:1100px;
   margin:auto;
   padding:35px 20px;
 }
 
-.title{
-  text-align:center;
-  color:#e99372;
-  font-size:32px;
-  margin:35px 0 25px;
-}
-
 .intro{
   text-align:center;
-  font-size:19px;
-  line-height:1.7;
-  color:#d5e5e1;
+  margin-bottom:35px;
 }
 
-.problem-grid,
-.machine-grid{
+.intro h2{
+  color:#7de0c4;
+  font-size:32px;
+}
+
+.intro p{
+  font-size:18px;
+  line-height:1.7;
+}
+
+.cards{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-  margin-top:25px;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
 }
 
 .card{
-  background:#102b25;
-  border:1px solid #285248;
-  border-radius:22px;
-  padding:25px;
-  text-align:center;
+  background:#102923;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 8px 25px rgba(0,0,0,.35);
   transition:.3s;
 }
 
 .card:hover{
   transform:translateY(-7px);
-  background:#15372f;
 }
 
-.picture{
-  font-size:70px;
-  margin-bottom:15px;
+.card img{
+  width:100%;
+  height:210px;
+  object-fit:cover;
+}
+
+.card-content{
+  padding:22px;
 }
 
 .card h3{
-  color:#9de0d1;
+  color:#7de0c4;
   font-size:23px;
 }
 
 .card p{
-  color:#c7d8d4;
+  color:#d5e8e3;
   line-height:1.6;
 }
 
-.machine{
-  background:linear-gradient(145deg,#12382f,#0d241f);
-  border-radius:22px;
-  padding:25px;
-  text-align:center;
-  border:1px solid #39675c;
-}
-
-.machine .picture{
-  font-size:75px;
-}
-
-.machine h3{
-  color:#f0a27f;
-}
-
-.number{
-  display:inline-block;
-  background:#d87f60;
-  color:white;
-  width:35px;
-  height:35px;
-  line-height:35px;
-  border-radius:50%;
-  margin-bottom:10px;
-}
-
 footer{
+  margin-top:45px;
+  padding:30px;
   text-align:center;
-  padding:35px 20px;
-  margin-top:30px;
-  border-top:1px solid #31534c;
-  color:#91bdb4;
+  background:#04120f;
+  color:#9ccfc1;
 }
 </style>
 </head>
@@ -141,114 +106,104 @@ footer{
 <body>
 
 <header>
-  <div class="earth">🌍</div>
-  <h1>Yer va Iqlim</h1>
-  <p>Sayyoramizni asrash va iqlim muammolarining oldini olish</p>
+  <h1>🌍 Yer va Iqlim</h1>
+  <p>Tabiatni asrash va iqlim muammolarining oldini olish</p>
 </header>
 
 <div class="container">
 
-  <h2 class="title">🌡️ Iqlim muammolari</h2>
-
-  <p class="intro">
-    Yer yuzida haroratning oshishi, havoning ifloslanishi,
-    muzliklarning erishi va o‘rmonlarning kamayishi
-    tabiatga salbiy ta’sir ko‘rsatadi.
+<section class="intro">
+  <h2>🌱 Iqlim muammolari</h2>
+  <p>
+    Yer sayyorasini asrash uchun havoning ifloslanishini kamaytirish,
+    qayta tiklanuvchi energiyadan foydalanish va tabiatni himoya qilish muhim.
   </p>
+</section>
 
-  <div class="problem-grid">
-
-    <div class="card">
-      <div class="picture">🌡️</div>
-      <h3>Global isish</h3>
-      <p>Atmosferadagi issiqxona gazlari ko‘payishi Yer haroratining oshishiga olib keladi.</p>
-    </div>
-
-    <div class="card">
-      <div class="picture">🏭</div>
-      <h3>Havo ifloslanishi</h3>
-      <p>Zavod va transportlardan chiqadigan gazlar atmosfera sifatiga ta’sir qiladi.</p>
-    </div>
-
-    <div class="card">
-      <div class="picture">🧊</div>
-      <h3>Muzliklarning erishi</h3>
-      <p>Harorat oshishi muzliklarning qisqarishi va dengiz sathining ko‘tarilishiga sabab bo‘ladi.</p>
-    </div>
-
-    <div class="card">
-      <div class="picture">🌳</div>
-      <h3>O‘rmonlarning kamayishi</h3>
-      <p>Daraxtlarning kamayishi karbonat angidridni yutish imkoniyatini pasaytiradi.</p>
-    </div>
-
-  </div>
-
-  <h2 class="title">🛠️ Muammolarni kamaytiruvchi uskuna va mashinalar</h2>
-
-  <div class="machine-grid">
-
-    <div class="machine">
-      <div class="number">1</div>
-      <div class="picture">☀️🔋</div>
-      <h3>Quyosh panellari</h3>
-      <p>Quyosh energiyasidan elektr ishlab chiqaradi va qazilma yoqilg‘iga ehtiyojni kamaytiradi.</p>
-    </div>
-
-    <div class="machine">
-      <div class="number">2</div>
-      <div class="picture">🌬️⚡</div>
-      <h3>Shamol turbinalari</h3>
-      <p>Shamol energiyasidan foydalanib elektr energiyasi ishlab chiqaradi.</p>
-    </div>
-
-    <div class="machine">
-      <div class="number">3</div>
-      <div class="picture">🚌🔋</div>
-      <h3>Elektr transport</h3>
-      <p>Elektr avtobus va avtomobillar yoqilg‘i sarfi hamda chiqindilarni kamaytirishga yordam beradi.</p>
-    </div>
-
-    <div class="machine">
-      <div class="number">4</div>
-      <div class="picture">♻️🚛</div>
-      <h3>Chiqindi qayta ishlash mashinalari</h3>
-      <p>Plastmassa, metall va boshqa chiqindilarni saralash va qayta ishlashda foydalaniladi.</p>
-    </div>
-
-    <div class="machine">
-      <div class="number">5</div>
-      <div class="picture">🌳🚜</div>
-      <h3>O‘rmon tiklash texnikasi</h3>
-      <p>Daraxt ekish va yashil hududlarni tiklash ishlarini tezlashtirishga yordam beradi.</p>
-    </div>
-
-    <div class="machine">
-      <div class="number">6</div>
-      <div class="picture">💧⚙️</div>
-      <h3>Suvni tozalash qurilmalari</h3>
-      <p>Suvni tozalash va undan xavfsiz foydalanish imkonini beradi.</p>
-    </div>
-
-  </div>
-
-  <h2 class="title">🌱 Biz nima qila olamiz?</h2>
+<div class="cards">
 
   <div class="card">
-    <div class="picture">🌍❤️</div>
-    <h3>Tabiatni asraylik</h3>
-    <p>
-      Daraxt ekish, energiyani tejash, chiqindilarni saralash,
-      jamoat transportidan foydalanish va suvni tejash
-      orqali atrof-muhitni muhofaza qilishga hissa qo‘shishimiz mumkin.
-    </p>
+    <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=900&q=80">
+    <div class="card-content">
+      <h3>☀️ Quyosh panellari</h3>
+      <p>
+        Quyosh panellari quyosh energiyasini elektr energiyasiga aylantiradi.
+        Ular zararli gazlar chiqishini kamaytirishga yordam beradi.
+      </p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=900&q=80">
+    <div class="card-content">
+      <h3>💨 Shamol turbinalari</h3>
+      <p>
+        Shamol turbinalari shamol kuchidan foydalanib elektr energiyasi ishlab
+        chiqaradi. Bu qayta tiklanuvchi energiya manbalaridan biridir.
+      </p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=900&q=80">
+    <div class="card-content">
+      <h3>🚗 Elektr avtomobillar</h3>
+      <p>
+        Elektr avtomobillar yoqilg‘i sarfini kamaytiradi va transportdan
+        chiqadigan zararli gazlarni kamaytirishga yordam beradi.
+      </p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=900&q=80">
+    <div class="card-content">
+      <h3>♻️ Chiqindilarni qayta ishlash</h3>
+      <p>
+        Maxsus qayta ishlash uskunalari plastik, qog‘oz va boshqa
+        chiqindilarni qayta foydalanishga imkon beradi.
+      </p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80">
+    <div class="card-content">
+      <h3>🌳 O‘rmonlarni himoya qilish</h3>
+      <p>
+        Daraxtlar havodagi karbonat angidridni yutadi. Ko‘proq daraxt ekish
+        va o‘rmonlarni asrash iqlim uchun muhim.
+      </p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=80">
+    <div class="card-content">
+      <h3>🔋 Energiya saqlash</h3>
+      <p>
+        Zamonaviy akkumulyatorlar quyosh va shamol energiyasini saqlab,
+        kerak bo‘lgan vaqtda elektr energiyasidan foydalanish imkonini beradi.
+      </p>
+    </div>
   </div>
 
 </div>
 
+<section class="intro">
+  <h2>🌍 Biz nima qila olamiz?</h2>
+  <p>
+    Elektr energiyasini tejash, daraxt ekish, chiqindilarni saralash,
+    jamoat transportidan foydalanish va tabiatni asrash orqali
+    iqlim muammolarini kamaytirishga hissa qo‘shishimiz mumkin.
+  </p>
+</section>
+
+</div>
+
 <footer>
-  🌍 Yer — bizning yagona uyimiz
+  🌱 Yer — bizning umumiy uyimiz. Uni asraylik!
 </footer>
 
 </body>
-    </html>
+</html>
